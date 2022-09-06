@@ -14,6 +14,7 @@ import { UserActivities } from "./js/views/useractivities";
 import { UserInvestments } from "./js/views/userinvestments";
 import { Login } from "./js/views/login";
 import { AllActivities } from "./js/views/allactivities";
+import { RegisterNewUser } from "./js/component/registernewuser";
 
 // import { Users } from "./views/users";
 // import { UserActivities } from "./views/useractivities";
@@ -59,6 +60,8 @@ const Layout = () => {
                                 element={isAuth ? <UserInvestments /> : <Navigate to="/login" />} />
                             <Route exact path="/allactivities"
                                 element={isAuth ? <AllActivities /> : <Navigate to="/login" />} />
+                                <Route exact path="/register-new-user"
+                                element={isAuth ? <RegisterNewUser /> : <Navigate to="/login" />} />
                             <Route
                                 path="*"
                                 element={<NotFound404 />}>
