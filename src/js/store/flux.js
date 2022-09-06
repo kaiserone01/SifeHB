@@ -124,6 +124,32 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 
 			},
+			registerNewUser: async (data) =>{
+				let token = localStorage.getItem("token");
+				try {
+					const response = await fetch("http://44.204.11.183:8080/admin/register-user", {
+						method: "POST",
+						headers: { 
+							"Content-Type": "application/json",
+							"Authorization": token 
+						},
+						body: JSON.stringify(data)
+					});
+					if(response.ok){
+						let body = await response.json();
+						sweetNotify(body.message, 'success');
+						return true;
+					}else if(response.status === 409){
+						let body = await response.json();
+						sweetNotify(body.message, 'error')
+						return false;
+					}
+					return false;
+				} catch (error) {
+					console.log(error)
+				}
+				
+			},
 			loginUser: async (data) => {
 				let actions = getActions();
 				try {
