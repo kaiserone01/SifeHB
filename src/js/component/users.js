@@ -33,7 +33,7 @@ export const Users = ({ data }) => {
           <p className="text-muted mb-0">{data.verified.toString() === "true" ? <span className="badge bg-success">Verificado en app</span> : <span className="badge bg-warning">No verificado</span>}</p>
         </td>
         <td>
-          {data.status === "processing" ? <span className="badge bg-warning">En proceso</span> : <span className="badge bg-success">Verificado</span>}
+          {data.status === "processing" || data.status === "registered" ? <span className="badge bg-warning">En proceso</span> : <span className="badge bg-success">Verificado</span>}
         </td>
         <td>{data.role === "user" ? "Usuario" : "Admin"}</td>
         <td>{data.user_level}</td>
