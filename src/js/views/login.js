@@ -28,7 +28,7 @@ export const Login = () => {
         <div className="login-page">
             <div className="login-box">
                 <div className="login-logo">
-                    <a href="#"><b>Admin</b>BNCI</a>
+                    <a href="#"><b>SIFE</b>HomeBanking</a>
                 </div>
                 {/* /.login-logo */}
                 <div className="card">

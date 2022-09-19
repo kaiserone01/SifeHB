@@ -49,7 +49,7 @@ export const UsersView = () => {
                                             </tr> */}
                                                 <tr>
                                                     <th>Nombre</th>
-                                                    <th>BNCI App Status</th>
+                                                    <th>SIFE App Status</th>
                                                     <th>Status LA</th>
                                                     <th style={{ width: 10 }}>Rol</th>
                                                     <th style={{ width: 10 }}>User Level</th>
